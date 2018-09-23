@@ -1,0 +1,201 @@
+.conpass {
+position:absolute;
+    top: 366px;
+    left: 605px;
+}
+
+.grid {
+
+position:absolute;
+left:20px;
+
+
+
+}
+
+
+
+.cemail {
+    position: absolute;
+bottom: 225px;
+left: 603px;
+}
+
+
+.reg {
+
+    position:absolute;
+    right:39px;
+}
+
+
+
+.signout {
+
+position: absolute;
+right: -154px;
+top: 10px;
+}
+
+
+
+body {
+    margin:0px;
+}
+#header {
+    display: block;
+    text-align: center;
+    background-color:#88C9F0;
+    width: 100%
+    
+    
+    
+}
+.footer {
+    height:30px;
+    display: block;
+    text-align: center;
+    background-color:#dce7ed;
+    
+    width: 100%;
+}
+
+
+
+
+.addr{
+    position: absolute;
+bottom: 254px;
+left: 604px;
+right: 176px;
+}
+#label1,#label2 {
+   margin-left:0px;
+   clear:both;
+}
+#label3, #label4, #label5 {
+
+margin-left:50px;
+}
+
+
+.container {
+    width: 1000px;
+    margin:0 auto;
+    text-align:left;
+    position:relative;
+    
+}
+
+.user {
+position: absolute;
+left: 519px;
+top: 28px;
+font-family:Arial;
+}
+
+
+.container .highlight-p {
+    text-align:center;
+    font-family:Arial;
+    font-size: 27px;
+    line-height: 45px;
+    color:#8e8e8e;
+}
+
+.menu-wrapper {
+    width:290px;
+    margin:0 auto;
+    padding-top: 51px;
+}
+.container p{
+    text-align:center;
+    font-family:Arial;
+    color:#8e8e8e;
+    font-size:16px;
+    padding-top:10px;
+
+}
+.main-heading {
+    font-size: 35px;
+    font-family: Arial;
+    line-height: 18px;
+    color:#38435E;
+    text-align: center;
+    margin: 0;
+    padding-top: 18px;
+}
+.dxICheckBox_MetropolisBlue
+{
+    margin-left: -4px;
+}
+    .center {
+    text-align: center;
+}
+        
+body {
+    text-align: center;
+}
+.passtxt {
+bottom: 167px;
+position: absolute;
+left: 605px;
+right: 175px;
+}
+.align {
+    margin-top:40px;
+    margin-left: 395px;
+}
+
+.profile-button {
+ position: absolute;
+right: -19px;
+top: 47px;
+width: 156px;
+height: 32px;
+color: #FFFFFF;
+font: normal 12px Tahoma, Geneva, sans-serif;
+border: 1px solid #cb4b31;
+background: #EF643C url('/WebSite/DXR.axd?r=0_4372-olYp8') repeat-x top;
+padding: 1px;
+}
+
+.img {
+    margin-left: 20px;
+}
+
+
+.pass {
+  
+position: absolute;
+left: 523px;
+top: 68px;
+font-family:Arial;
+}
+
+.name {
+position: absolute;
+top: 336px;
+left: 605px;
+}
+
+}
+.button {
+
+margin-left:210px;
+}
+
+.default1 {
+
+    margin-top:20px;
+    margin-left: 440px;
+    font-size: large;
+}
+.signup
+{
+bottom: 44px;
+position: absolute;
+left: 604px;
+}
+
+

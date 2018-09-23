@@ -1,0 +1,103 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="usacreator.signin.main" %>
+
+<%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxNavBar" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxMenu" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxSiteMapControl" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxTabControl" tagprefix="dx" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="themes/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="themes/css/heroic-features.css" rel="stylesheet" />
+    <script src="themes/js/bootstrap.min.js"></script>
+    <script src="themes/js/jquery-1.11.0.js"></script>
+    
+
+    <script type = "text/javascript" >
+        function preventBack() { window.history.forward(); }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+</script>
+
+
+</head>
+<body>
+    
+   <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <div class="ss"> <h2>Usa creator</h2></div>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+ 
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron hero-spacer">
+            <h2>A Warm Welcome!</h2>
+            <p>Let's get more out usa creator.</p>
+            
+        </header>
+
+     <div class="container">
+
+ <form id="form1" runat="server">
+    <div>
+    <br />
+        <div class="menu"> 
+            <dx:ASPxTabControl ID="ASPxTabControl2" CssClass="tab" runat="server" DataSourceID="ASPxSiteMapDataSource1" RenderMode="Lightweight" Theme="Glass">
+            </dx:ASPxTabControl>
+            <dx:ASPxSiteMapDataSource ID="ASPxSiteMapDataSource1" runat="server" SiteMapFileName="" />
+            </div>
+        <dx:ASPxButton ID="ASPxButton1" CssClass="logout" runat="server" Text="LOG OUT" OnClick="ASPxButton1_Click" Theme="SoftOrange" Font-Bold="True" Font-Size="X-Small"></dx:ASPxButton>
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
+    </div>
+    
+    
+    
+    
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Usa Creator <%=DateTime.Now.Year%></p>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+
+Hi <% name %>
+
+Thnak you for signing up for a new account at usa creator.
+
+To log into the site, use the following details:
+
+	User name : <% name %>
+	Password  :<% pass %>
+	
+	We look forward to your suggestions.
+	
+	The Usa creator Team
+	

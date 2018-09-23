@@ -1,0 +1,2 @@
+<input runat="server" ID="myfile" type="file" multiple="multiple" 
+                  class="fileupload" size="100"></input>

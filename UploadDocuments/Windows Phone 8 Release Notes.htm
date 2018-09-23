@@ -1,0 +1,733 @@
+﻿<html xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>Release Notes - Windows Phone SDK 8.0</title>
+    <style type="text/css">
+ body
+{
+	color: #000000;
+	font-family:	Verdana;
+	font-size: medium;
+	font-style: normal;
+	font-weight: normal;
+	margin-top:	0;
+	margin-bottom:	0;
+	margin-left:	0;
+	margin-right:	0;
+	width:	100%;
+}
+dl
+{
+	margin-top:	15;
+	margin-bottom:5;
+	padding-left:	1;
+}
+
+dl.authored dt {
+	font-style:	bold;
+	margin-top: 2;
+}
+
+dd {
+	margin-left:	20px;
+}
+
+ul
+{
+	margin-top:0;
+	margin-bottom:0;
+	margin-left: 17;
+	list-style-type: disc;
+}
+
+ul.nobullet
+{
+	display: block;
+	list-style: none;
+}
+
+ul ul
+{
+	margin-bottom: 4;
+	margin-left: 17;
+	margin-top: 3;
+	list-style-type: disc;
+}
+
+ol {
+	margin-top:0;
+	margin-bottom:0;
+	margin-left: 28;
+	list-style-type: decimal;
+}
+
+ol ol {
+	margin-bottom: 4;
+	margin-left: 28;
+	margin-top: 3;
+	list-style-type: lower-alpha;
+}
+
+li {
+	margin-top: 5;
+	margin-bottom: 5;
+}
+
+p {
+	margin-top: 10;
+	margin-bottom: 5;
+}
+
+a:link {
+	color:	#0000FF;
+}
+
+a:visited {
+	color: #DD7C3B;
+}
+
+a:hover {
+	color:	#3366FF;
+}
+
+code
+{
+	font-family:	Monospace, Courier New, Courier;
+	font-size: 105%;
+	color:	#000066;
+}
+
+span.parameter {
+	font-style: italic;
+}
+
+span.italic {
+	font-style: italic;
+}
+
+span.selflink {
+	font-weight: bold;
+}
+
+span.nolink {
+	font-weight: bold;
+}
+
+div.breadCrumbs {
+	font-size: 8pt;
+	margin-bottom: 5;
+	border-bottom-color: #C8CDDE;
+	border-bottom-style: solid;
+	border-bottom-width: 1;
+	padding-bottom: 5;
+}
+
+div#mainSection
+{
+	font-size: 62.5%;
+	width: 100%;
+}
+html&gt;body #mainSection
+{
+	font-size:73%;
+	width: 100%;
+}
+
+div#mainBody
+{
+	font-size: 100%;
+	margin-left: 15;
+	margin-top: 10;
+}
+
+html&gt;body #mainBody
+{
+	font-size: 93%;
+	margin-left: 15;
+	margin-top: 10;
+	padding-bottom: 20;
+}
+
+div#mainBody p, div#mainBody ol, div#mainBody ul, div#mainBody dl
+{
+	padding-right: 5;
+}
+
+div#header
+{
+	padding-top:	0;
+	padding-bottom:	0;
+	padding-left:	0;
+	padding-right:	0;
+	width:	100%;
+}
+
+div#header table
+{
+	width:	100%;
+}
+
+div#header table td
+{
+	color: #0000FF;
+	font-size: 70%;
+	margin-top:	0;
+	margin-bottom:	0;
+	padding-right: 20;
+}
+
+div#header table tr#headerTableRow2 td
+{
+	padding-left: 13px;
+}
+
+div#header table tr#headerTableRow3 td
+{
+	padding-top: 2px;
+	padding-left: 15;
+}
+
+div#header table#bottomTable
+{
+	border-top-color: #FFFFFF;
+	border-top-style: solid;
+	border-top-width: 1;
+	text-align: left;
+	padding-left: 15;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+div#mainSection table td.imageCell
+{
+	white-space: nowrap;
+}
+
+div#mainBody div.alert, div#mainBody div.code, div#mainBody div.tableSection
+{
+	width:98.9%;
+}
+
+div#mainBody div.section div.alert, div#mainBody div.section div.code,
+div#mainBody div.section div.tableSection
+{
+	width:100%;
+}
+
+div#mainBody div.section ul div.alert, div#mainBody div.section ul div.code,
+div#mainBody div.section ul div.tableSection, div#mainBody div.section ol div.alert, 
+div#mainBody div.section ol div.code, div#mainBody div.section ol div.tableSection
+{
+	width:100%;
+}
+
+div.alert p, div.code p
+{
+	margin-top:5;
+	margin-bottom:8;
+}
+dd p
+{
+	margin-top:2;
+	margin-bottom:8;
+}
+div.tableSection p
+{
+	margin-top:1;
+	margin-bottom:4;
+}	
+li p
+{
+	margin-top:2;
+	margin-bottom:2;
+}
+div.seeAlsoNoToggleSection dl
+{
+	margin-top:8;
+	margin-bottom:1;
+	padding-left:1;
+}
+div.seeAlsoNoToggleSection dd p
+{
+	margin-top:2;
+	margin-bottom:8;
+}
+div.section dl
+{
+	margin-top:8;
+	margin-bottom:1;
+	padding-left:1;
+}
+div.section dd p
+{
+	margin-top:2;
+	margin-bottom:8;
+}
+
+div.code table
+{
+	border: 0;
+	font-size: 95%;
+	margin-bottom: 5;
+	margin-top:-.4em;
+	width: 100%
+}
+
+div.code table th
+{	
+	background:	#EFEFF7;
+	border-bottom-color: #C8CDDE;
+	border-bottom-style: solid;
+	border-bottom-width: 1;
+	color: #000066;
+	font-weight: bold;
+	padding-left: 5;
+	padding-right: 5;
+}
+
+div.code table td
+{
+	background:	#F7F7FF;
+	border-top-color: #FFFFFF;
+	border-top-style: solid;
+	border-top-width: 1;
+	padding-left: 5;
+	padding-right: 5;
+	padding-top: 5;
+}
+
+span#runningHeaderText
+{
+	color: #8C8C8C;
+	font-size: 90%;
+	padding-left: 13;
+}
+
+span#nsrTitle
+{
+	color: #000000;
+	font-size: 160%;
+	font-weight: 400;
+	font-family: arial;
+}
+
+div#footer
+{
+	font-size: 80%;
+	margin-top:	0;
+	margin-bottom:	0;
+	margin-left:	0;
+	margin-right:	0;
+	padding-top:	8;
+	padding-bottom:	6;
+	padding-left:	1;
+	padding-right:	1;
+	width:	100%;
+}
+
+html&gt;body div#footer
+{
+	font-size: 80%;
+	margin-top:	0;
+	margin-bottom:	0;
+	margin-left:	0;
+	margin-right:	0;
+	padding-top:	2;
+	padding-bottom:	6;
+	padding-left:	1;
+	padding-right:	1;
+	width:	98%;
+}
+
+div.seeAlsoNoToggleSection
+{
+	margin-left:0;
+	padding-top:	2;
+	padding-bottom:	2;
+	padding-left:	0;
+	padding-right:	15;
+	width:	100%;
+}
+
+div.section
+{
+	margin-left:0;
+	padding-top:	0;
+	padding-bottom:	0;
+	padding-left:	16;
+	padding-right:	15;
+	width:	100%;
+}
+html&gt;body div.section
+{
+	margin-left:0;
+	padding-top:	2;
+	padding-bottom:	2;
+	padding-left:	16;
+	padding-right:	15;
+	width:	97%;
+}
+div.seeSection
+{
+	margin-left:0;
+	padding-top:	0;
+	padding-bottom:	2;
+	padding-left:	16;
+	padding-right:	15;
+	width:	100%;
+}
+
+.heading
+{
+	font-weight:	bold;
+	margin-top:		18;
+	margin-bottom:	8;
+}
+
+h1.heading
+{
+	color: #000000;
+	font-size:	130%;
+}
+
+.subHeading
+{
+	font-weight:	bold;
+	margin-bottom:	4;
+}
+.procedureSubHeading
+{
+	font-weight: bold;
+	margin-bottom: 4;
+}
+
+h3.subHeading
+{
+	color:  #000000;
+	font-size: 120%;
+    font-weight:800;
+}
+
+h3.procedureSubHeading
+{
+	color: #000000;
+	font-size: 120%;
+}
+
+h4.subHeading
+{
+	color: #000000;
+	font-size: 110%;
+	font-weight:800;
+}
+span.labelheading, div.labelheading
+{
+	font-size:100%;
+	color:#003399;
+}
+
+img.note
+{
+	border: 0;
+	margin-right: 3;
+}
+
+div#mainSection table
+{
+	border: 0;
+	font-size: 100%;
+	width:	98.9%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+div#mainSection table tr
+{
+	vertical-align: top;
+}
+
+div#mainSection table th
+{
+	background-color: #EFEFF7;
+	border-bottom: 1px solid #C8CDDE;
+	border-left: 1px none #D5D5D3;
+	color: #000066;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: left;
+}
+
+div#mainSection table td
+{
+	background-color: #F7F7FF;
+	border-bottom: 1px solid #D5D5D3;
+	border-left: 1px none #D5D5D3;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+div#mainSection table td.imageCell
+{
+	white-space: nowrap;
+}
+
+div.code table
+{
+	border: 0;
+	font-size: 95%;
+	margin-bottom: 5;
+	width: 100%
+}
+
+div.code table th
+{	
+	background:	#EFEFF7;
+	border-bottom-color: #C8CDDE;
+	border-bottom-style: solid;
+	border-bottom-width: 1;
+	color: #000066;
+	font-weight: bold;
+	padding-left: 5;
+	padding-right: 5;
+}
+
+div.code table td
+{
+	background:	#F7F7FF;
+	border-top-color: #FFFFFF;
+	border-top-style: solid;
+	border-top-width: 1;
+	padding-left: 5;
+	padding-right: 5;
+	padding-top: 5;
+}
+
+div.alert table
+{
+	border: 0;
+	font-size: 100%;
+	width:	100%;
+}
+
+div.alert table th
+{
+	background:	#EFEFF7;
+	border-bottom-width: 0;
+	color: #000066;
+	padding-left: 5;
+	padding-right: 5;
+}
+
+div.alert table td
+{
+	background:	#F7F7FF;
+	border-top-color: #FFFFFF;
+	border-top-style: solid;
+	border-top-width: 1;
+	padding-left: 5;
+	padding-right: 5;
+}
+
+div.code pre
+{
+	font-family:	Monospace, Courier New, Courier;
+	font-size: 105%;
+	color:	#000066;
+	word-wrap:	break-word;
+	background: #F7F7FF;
+}
+
+.tip
+{
+	color:	#0000FF;
+	font-style: italic;
+	cursor: pointer;
+	text-decoration:underline;
+}
+
+.math
+{
+	font-family: Times New Roman;
+	font-size: 125%
+}
+
+div.footerLine {
+	margin: 0;
+	width: 100%;
+	padding-top:	8;
+	padding-bottom:	6;
+	/*padding-left:	5;
+	padding-right:	2;*/
+
+}
+
+div.hr1 {
+	margin: 0;
+	width: 100%;
+	height: 1px;
+	padding: 0;
+	background: #C8CDDE;
+	font-size: 1px;
+}
+
+div.hr2 {
+	margin: 0;
+	width: 100%;
+	height: 1px;
+	padding: 0;
+	background: #D4DFFF;
+	font-size: 1px;
+}
+
+div.hr3 {
+	margin: 0;
+	width: 100%;
+	height: 1px;
+	padding: 0;
+	background: #EEEEFF;
+	font-size: 1px;
+}
+
+span.cs {
+	display: none;
+}
+
+span.vb {
+	display: none;
+}
+
+span.cpp {
+	display: none;
+}
+
+span.nu {
+	display: inline;
+}
+
+span.fs 
+{
+	display: none;
+}
+
+span.code {
+	font-family:	Monospace, Courier New, Courier;
+	font-size: 105%;
+	color:	#000066; 
+}
+span.ui {
+	font-weight: bold;
+}
+span.math {
+	font-style: italic;
+}
+span.input {
+	font-weight: bold;
+}
+span.term {
+	font-style: italic;
+}
+span.label 
+{
+	font-weight: bold;
+}
+span.foreignPhrase {
+	font-style: italic;
+}
+span.placeholder {
+	font-style: italic;
+}
+span.keyword 
+{
+	font-weight: bold;
+}
+span.typeparameter
+{
+	font-style:italic;
+}
+
+div.caption
+{
+	font-weight: bold;
+	font-size:100%;
+	color:#003399;
+}
+
+
+div.code span.keyword 
+{
+	color: #871F78;
+}
+
+div.code span.parameter 
+{
+	font-style: italic;
+}
+
+div.code span.literal 
+{
+	color:#8B0000;
+}
+
+div.code span.comment 
+{
+	color: #006400;
+}
+
+span.syntaxLabel
+{
+	color:#0481DA;
+	font-weight:bold;
+}
+span.introStyle
+{
+	color:DarkGray;
+}
+
+div.seeAlsoStyle
+{
+	padding-top:5px;
+
+}
+
+td.nsrBottom
+{
+	height: 0.6em;
+	width: 100%;
+}
+  </style>
+  </head>
+  <body>
+    <div id="header">
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText" />
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">Release Notes - Windows Phone SDK 8.0</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left" />
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <font color="DarkGray"></font>
+        <p /> <div class="introduction"><p>These are the release notes for Windows Phone SDK 8.0. Windows Phone SDK 8.0 contains the tools that you need to develop Windows Phone apps. These release notes provide you with known issues related to developing Windows Phone apps using Windows Phone SDK 8.0.</p><p>These release notes contain the following sections.</p><p><span sdata="link"><a href="#BKMK_Whatsnew">What’s new</a></span></p><p><span sdata="link"><a href="#BKMK_PreviousReleases">Previous releases</a></span></p><p><span sdata="link"><a href="#ARND_KnownIssues">Known issues</a></span></p><p><span sdata="link"><a href="#BKMK_BreakingChanges">Breaking changes</a></span></p><p><span sdata="link"><a href="#BKMK_WCFDataServicesTools">OData Client Tools for Windows Phone</a></span></p></div><a name="BKMK_Whatsnew" /><h1 class="heading"><span>What’s new</span></h1><div id="sectionSection0" class="section" name="collapseableSection" style=""><p>Find out what’s new in the SDK in <a href="http://go.microsoft.com/fwlink/?LinkId=257904">What’s new in the Windows Phone SDK 8.0</a>.</p></div><a name="BKMK_PreviousReleases" /><h1 class="heading"><span>Previous releases</span></h1><div id="sectionSection1" class="section" name="collapseableSection" style=""><p>Release notes for earlier releases of the Windows Phone SDK are at the following locations.</p><ul><li><p><a href="http://go.microsoft.com/fwlink/?LinkId=242824">Windows Phone SDK 7.1.1 Update</a></p></li><li><p><a href="http://go.microsoft.com/fwlink/?LinkID=215229">Windows Phone SDK 7.1</a></p></li><li><p><a href="http://go.microsoft.com/fwlink/?LinkID=202864">Windows Phone Developer Tools 7.0 January 2011 Update</a></p></li><li><p>Windows Phone Developer Tools 7</p></li></ul></div><a name="ARND_KnownIssues" /><h1 class="heading"><span>Known issues</span></h1><div id="sectionSection2" class="section" name="collapseableSection" style=""><p>The following sections contain details about known issues in Windows Phone SDK 8.0.</p><p><span sdata="link"><a href="#BKMK_Uninstallation">Uninstallation</a></span></p><p><span sdata="link"><a href="#BKMK_WindowsPhoneEmulator">Windows Phone Emulator</a></span></p><p><span sdata="link"><a href="#BKMK_VisualStudio">Visual Studio</a></span></p><p><span sdata="link"><a href="#BKMK_Designer">Visual Studio Designer</a></span></p><p><span sdata="link"><a href="#BKMK_WMAppManifest">App manifest</a></span></p><p><span sdata="link"><a href="#BKMK_Speech">Speech</a></span></p><p><span sdata="link"><a href="#BKMK_NativeApps">Native apps</a></span></p><p><span sdata="link"><a href="#BKMK_Camera">Camera</a></span></p><p><span sdata="link"><a href="#BKMK_localization">Localization</a></span></p><a name="BKMK_Uninstallation" /><h3 class="subHeading">Uninstallation</h3><div class="subsection"><ul><li><p>After uninstalling Windows Phone SDK 8.0, the Windows Phone SDK 7.1 state may become unstable.</p><p><span class="label">User impact:</span> Windows Phone SDK 7.1 might be unstable.</p><p><span class="label">Workaround:</span> After you uninstall Windows Phone SDK 8.0, uninstall Windows Phone SDK 7.1.1 Update, uninstall Windows Phone SDK 7.1, and then reinstall Windows Phone SDK 7.1, and reinstall Windows Phone SDK 7.1.1 Update.</p></li><li><p>After uninstalling Visual Studio 2012, the native profiler may stop working. </p><p><span class="label">User impact:</span> You won’t be able to use the native profiler.</p><p><span class="label">Workaround:</span> Repair Windows Phone SDK 8.0 by selecting it from <span class="ui">Programs and Features</span> in <span class="ui">Control Panel</span>.</p></li></ul></div><a name="BKMK_WindowsPhoneEmulator" /><h3 class="subHeading">Windows Phone Emulator</h3><div class="subsection"><ul><li><p>H.264 audio is not synchronized with video when you rewind or fast-forward on the Windows Phone 7.1 emulator. </p><p><span class="label">User impact:</span> Audio and video synchronization may appear disconnected on the Windows Phone 7.1 emulator.</p><p><span class="label">Workaround:</span> None.</p></li><li><p>Your app may crash during recording if H.264 video-capture APIs (<span class="code">Windows.Phone.Media.Capture.KnownCameraAudioVideoProperties.H264*</span>) are called before recording begins. </p><p><span class="label">User impact:</span> The app will close unexpectedly and the emulator will return to <span sdata="langKeyword" value="Start"><span class="keyword">Start</span></span>. </p><p><span class="label">Workaround:</span> Debug using a Windows Phone 8 device.</p></li><li><p>Emulator doesn’t support the <span class="code">ICameraCaptureDeviceNative::GetPreviewBufferTexture</span> native camera method. </p><p><span class="label">User impact:</span> Error <span class="code">0x80004001</span> occurs if <span class="code">ICameraCaptureDeviceNative::GetPreviewBufferTexture</span> is called while running on the emulator. </p><p><span class="label">Workaround:</span> Debug using a Windows Phone 8 device.</p></li><li><p>Emulator doesn’t support <span class="code">Windows.Phone.Media.Capture.CaptureSequence.Frames[0].AppliedProperties</span>. </p><p><span class="label">User impact:</span> When <span class="code">AppliedProperties</span> is called, an <span class="code">ObjectDisposedException</span> is thrown. </p><p><span class="label">Workaround:</span> Use a <span sdata="langKeyword" value="try"><span class="keyword">try</span></span>/<span sdata="langKeyword" value="catch"><span class="keyword">catch</span></span> statement around the <span class="code">AppliedProperties</span> call to catch the exception.</p></li><li><p>Emulator camera may save photos in an unexpected orientation. </p><p><span class="label">User impact:</span> Photos from the emulator camera may appear in the wrong orientation and/or flipped vertically. </p><p><span class="label">Workaround:</span> Debug using a Windows Phone 8 device.</p></li><li><p>If an app creates a Direct3D graphics device and requests a feature level higher than 9_3, the device will be successfully created only on the emulator and not on a device.</p><p><span class="label">User impact:</span> When the app is run on the phone, it won’t be able to create a Direct3D graphics device with a feature level higher than 9_3, so some code that requires higher feature level functionality could work on the emulator but not work on a physical device.</p><p><span class="label">Workaround:</span> Test your Direct3D-specific code using a Windows Phone 8 device. Optionally, when you create a new project, modify Direct3DBase.cpp to remove all feature levels except 9_3 from the array of D3D_FEATURE_LEVEL values supplied in the <span class="code">pFeatureLevel</span> parameter to the D3D11CreateDevice function.</p></li><li><p>You can’t deploy an app to the emulator if the app lists ID_REQ_GYROSCOPE or ID_REQ_MAGNETOMETER hardware requirements in the WMAppManifest.xml file. </p><p><span class="label">User impact:</span> You’ll receive the following error message if you try to deploy to the emulator an app that has gyroscope, compass, or Near Field Communication (NFC) capabilities set in the WMAppManifest.xml file: <span class="code">Installation of the application failed. Run time error has occurred. Fix the Capabilities in WMAppManifest.xml file.</span></p><p><span class="label">Workaround:</span> If the app needs these requirements, test the app on a Windows Phone 8 device instead of on the emulator. </p></li></ul></div><a name="BKMK_VisualStudio" /><h3 class="subHeading">Visual Studio</h3><div class="subsection"><ul><li><p>The IntelliSense file for the Map control (<span class="code">Microsoft.Phone.Maps.*</span> namespaces) is not included in the SDK.</p><p><span class="label">User impact:</span> No IntelliSense appears in the IDE when you are using APIs in the <span class="code">Microsoft.Phone.Maps.*</span> namespaces. </p><p><span class="label">Workaround:</span> Download the IntelliSense .zip file for the <span class="code">Map</span> control from the following location: </p><p><a href="http://go.microsoft.com/fwlink/?LinkId=267924">http://go.microsoft.com/fwlink/?LinkId=267924</a></p><p>Unzip the downloaded file and select the IntelliSense file that corresponds to the language version of the SDK you have installed. </p><p>Copy the selected file to the following location in the directory where you have installed the SDK: </p><p>&lt;installDir&gt;\Reference Assemblies\Microsoft\Framework\WindowsPhone\v8.0</p></li><li><p>An incorrect error message is displayed when you attempt to add an unsupported reference to a portable library project from a Windows Phone project. </p><p><span class="label">User impact:</span> You may see an incorrect error message, such as the following: </p><p><span class="code">Failed to add reference. A reference to 'PortableViewModel40' could not be added. User canceled out of save dialog (Exception from HRESULT: 0x8004000C (OLE_E_PROMPTSAVECANCELLED))</span></p><p><span class="label">Workaround:</span> Go to the <span class="ui">Library</span> tab in the Portable Class Library project properties and modify the project’s target frameworks to support the version of Windows Phone you want to reference.</p></li><li><p>When working with code in Visual Studio 2012, using the Up Arrow and Down Arrow keys to select items in the IntelliSense list doesn’t work as intended. </p><p><span class="label">User impact:</span> When using IntelliSense in Visual Studio 2012, you may have difficulty selecting IntelliSense items from the IntelliSense list using the Up Arrow and Down Arrow keys. </p><p><span class="label">Workaround:</span> Press the ESC key to close the current IntelliSense list and free the cursor.</p></li><li><p>The object browser doesn’t show the contents of Windows.winmd or Platform.winmd specific to phone projects.</p><p><span class="label">User impact:</span> Visual Studio may freeze and the object browser won’t show the contents of Windows.winmd or Platform.winmd. In some scenarios, the object browser may show correct information, however, using the object browser to navigate to either of the .winmd files won’t work.</p><p><span class="label">Workaround:</span> No current workaround is available, however, a resolution is planned in a Visual Studio update.</p></li><li><p>The <span class="code">System.Threading.ReaderWriterLockSlim.TryEnterWriteLock</span> method throws a <span class="code">MethodAccessException</span> when resource contention occurs on a background thread. </p><p><span class="label">User impact:</span> The <span class="code">ReaderWriterLockSlim.TryEnterWriteLock</span> method will receive <span class="code">MethodAccessExceptions</span> during normal use. The following exception with be displayed: </p><p><span class="code">Attempt by method 'System.Threading.ReaderWriterLockSlim.WaitOnEvent(System.Threading.EventWaitHandle, UInt32 ByRef, TimeoutTracker)' to access method 'System.Threading.WaitHandle.WaitOne(Int32, Boolean)' failed.</span></p><p><span class="label">Workaround:</span> Avoid using a <span class="code">ReaderWriterLockSlim</span> object. Use other synchronization primitives such the <span class="code">Monitor</span> class. As an additional alternative, use a <span class="code">System.Threading.SemaphoreSlim</span> object at the class level.</p></li><li><p>Building a project in Visual Studio will fail when XAML refers to objects containing: </p><ul><li><p>A WINPRT enum or a WINPRT enum wrapped in another value type.</p></li><li><p>A virtual method signature with a WINPRT enum or a WINPRT enum wrapped in another value type.</p></li></ul><p><span class="label">User impact:</span> Visual Studio can’t build the project.</p><p><span class="label">Workaround:</span> Wrap the WINPRT types in managed classes.</p></li><li><p>When a Windows Phone 7.1 WINPRT project's configuration is changed to ARM\x86, the project is no longer checked for build tasks. </p><p><span class="label">User impact:</span> In Visual Studio, the rebuild and clean actions don’t occur for the Windows Phone 7.1 project. </p><p><span class="label">Workaround:</span> To build the project in Visual Studio, mark the project for build in Visual Studio.</p></li></ul></div><a name="BKMK_Designer" /><h3 class="subHeading">Visual Studio Designer</h3><div class="subsection"><ul><li><p>In the Visual Studio Designer view in a Windows Phone 8 app, an exception occurs when the app references a Portable Class Library that targets any combination of the following platforms: .NET Framework 4.5, .NET Framework for Windows Store apps, and Windows Phone 8. When this happens, the following error appears: <span class="code">Error HRESULT E_FAIL has been returned from a call to a COM component</span>.</p><p><span class="label">User impact:</span> You can’t use the Visual Studio Designer if your app references a Portable Class library that targets any combination of those three platforms. </p><p><span class="label">Workaround:</span> Use the designer in Expression Blend instead of the Visual Studio designer. Alternatively, change the targets of the portable library to include any of the following: .NET Framework 4.0.3 or earlier versions, Windows Phone 7.5 or earlier versions, Silverlight 5 or earlier versions, or Xbox 360. Alternatively, remove the reference to the Portable Class Library project and replace it with a reference to the DLL that is the result of building that project.</p></li></ul></div><a name="BKMK_WMAppManifest" /><h3 class="subHeading">App manifest</h3><div class="subsection"><ul><li><p>Deploying an app that uses the ID_CAP_WALLET_SECUREELEMENT capability to a dev unlock device fails and displays the following error: <span class="code">Installation of the application failed. Run time error has occurred. Fix the Capabilities in WMAppManifest.xml file. </span></p><p><span class="label">User impact:</span> You can’t side load an app that uses the ID_CAP_WALLET_SECUREELEMENT capability. </p><p><span class="label">Workaround:</span> To deploy an app using this capability, you must request special permissions and have those permissions applied to your dev account. For more info, and to contact support for assistance, go to <a href="http://go.microsoft.com/fwlink/?LinkId=263928">Developer support</a>.</p></li></ul></div><a name="BKMK_Speech" /><h3 class="subHeading">Speech</h3><div class="subsection"><ul><li><p>Word breaking on list grammars created for the JPN locale might be incorrect.</p><p><span class="label">User impact:</span> Some common words for the JPN locale won’t be recognized.</p><p><span class="label">Workaround:</span> Developers who target the JPN locale should always use Speech Recognition Grammar Specification (SRGS) grammars and avoid list grammars.</p></li><li><p>If a user changes their Windows Phone locale, apps that use speech grammar may encounter an error. This error occurs because the locale change forces a format change for the related region-specific format value. Values that are affected include weight, repeat-prob, float variant tags, volume, rate, pitch, range, time, and contour.</p><p><span class="label">User impact:</span> Users who change locale may experience errors in speech apps.</p><p><span class="label">Workaround:</span> In Speech Synthesis Markup Language (SSML), don't use non-integer XML values.</p></li></ul></div><a name="BKMK_NativeApps" /><h3 class="subHeading">Native apps</h3><div class="subsection"><ul><li><p>In a native-only app—that is, an app that contains no XAML--the <span class="code">CurrentApp::LicenseInformation-&gt;IsTrial</span> API throws an exception if it is called from the app’s main thread.</p><p><span class="label">User impact:</span> A developer working with a native-only app won’t be able to tell whether the app is in <span sdata="langKeyword" value="Trial"><span class="keyword">Trial</span></span> mode.</p><p><span class="label">Workaround:</span> Call the API from a different thread, such as the following:</p><p><span class="code">ThreadPool::RunAsync( ref new WorkItemHandler( [](IAsyncAction^ operation)</span></p><p><span class="code">{</span></p><p><span class="code">auto value = CurrentApp::LicenseInformation-&gt;IsTrial;</span></p><p><span class="code">}));</span></p></li></ul></div><a name="BKMK_Camera" /><h3 class="subHeading">Camera</h3><div class="subsection"><ul><li><p>When a photo is captured when the phone is in an inverted-portrait or portrait orientation, the automatically chosen orientation may be upside-down.</p><p><span class="label">User impact:</span> Photos will appear upside-down in the camera roll.</p><p><span class="label">Workaround:</span> Limit your app to a landscape orientation or use <span class="code">Windows.Phone.Media.Capture.KnownCameraGeneralProperties.EncodeWithOrientation</span> to directly specify the image orientation.</p><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><b>Note:</b></th></tr><tr><td><p>The accelerometer APIs are required to detect an inverted-portrait orientation.</p></td></tr></table></div></li></ul></div><a name="BKMK_localization" /><h3 class="subHeading">Localization</h3><div class="subsection"><ul><li><p>Each localized version of the Windows Phone SDK 8.0 is designed to function with the corresponding localized operating system and localized version of Visual Studio 2012. </p><p><span class="label">User impact:</span> You may experience problems when using the Windows Phone SDK 8.0 that is localized for one language with Visual Studio 2012 that is localized for a different language. For instance, using the Italian version of the Windows Phone SDK 8.0 with the English version of Visual Studio 2012 is not a supported scenario. For more info, see <a href="http://go.microsoft.com/fwlink/?LinkId=268391">Windows Phone SDK 8.0</a>.</p><p><span class="label">Workaround:</span> Ensure that the Windows Phone SDK 8.0, Visual Studio 2012, and the operating system all support the same localized language.</p></li></ul></div></div><a name="BKMK_BreakingChanges" /><h1 class="heading"><span>Breaking changes</span></h1><div id="sectionSection3" class="section" name="collapseableSection" style=""><p>You’ll find info about breaking changes in the SDK in the <span class="term">Windows Phone app platform compatibility</span> topic in the Windows Phone 8 Developer Documentation. </p></div><a name="BKMK_WCFDataServicesTools" /><h1 class="heading"><span>OData Client Tools for Windows Phone</span></h1><div id="sectionSection4" class="section" name="collapseableSection" style=""><p>The OData Client Tools for Windows Phone installer extends the Add Service Reference experience with client-side OData support for developing Windows Phone 7 and Windows Phone 8 apps using Windows Phone SDK 8.0. The tooling adds references that are capable of consuming OData services up to v3. The OData Client Tools for Windows Phone is not included in the SDK. To download and learn more about the OData Client Tools for Windows Phone, see <a href="http://go.microsoft.com/fwlink/?LinkId=268126">OData Client Tools for Windows Phone</a>.</p></div><a name="ARND_CopyRight" /><h1 class="heading"><span>Copyright and confidentiality statements</span></h1><div id="sectionSection5" class="section" name="collapseableSection" style=""><p>This document is provided “as-is”.  Information in this document, including URL and other Internet Web site references may change without notice. </p><p>Some examples depicted herein are provided for illustration only and are fictitious.  No real association or connection is intended or should be inferred. </p><p>This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes and for no other purpose without the express written permission of Microsoft Corporation. </p><p>© 2012 Microsoft Corporation.  All rights reserved.</p><p>Microsoft, ActiveX, Authenticode, Bing, Calibri, Direct3D, DirectX, DreamSpark, Excel, Expression, Expression Blend, Georgia, Hyper-V, InPrivate, IntelliSense, Internet Explorer, Jscript, Kinect, MS, MS-DOS, MSDN, MSN, Outlook, PlayReady, Segoe, SQL Azure, SQL Server, Tahoma, Verdana, Visual Basic, Visual C#, Visual C++, Visual Studio, Win32, Windows, Windows Azure, Windows Live, Windows Server, Windows Vista, WinFX, Xbox, Xbox 360, Xbox LIVE, XNA, and Zune are trademarks of the Microsoft group of companies. </p><p>All other trademarks are property of their respective owners.</p></div></div>
+      <div id="footer">
+        <div class="footerLine" />
+      </div>
+      <p />
+    </div>
+  </body>
+</html>
